@@ -37,7 +37,7 @@ export const Hero = ({ onExploreClick }: HeroProps) => {
               {/* Inner HUD Circular Frame */}
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[2px] bg-gradient-to-b from-cyan-400 via-slate-800 to-purple-500 overflow-hidden shadow-xl shadow-cyan-950/50">
                 <img
-                  src="/images/hari_profile.jpg"
+                  src={`${import.meta.env.BASE_URL}images/hari_profile.jpg`}
                   alt="Hari Krishnan"
                   className="w-full h-full object-cover object-top rounded-full transition-transform duration-300 group-hover:scale-105"
                 />

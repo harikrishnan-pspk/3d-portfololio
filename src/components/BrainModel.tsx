@@ -16,7 +16,8 @@ export const BrainModel = ({
   const matRef = useRef<THREE.MeshPhysicalMaterial | null>(null);
 
   // Load actual human brain 3D model
-  const { scene } = useGLTF('/models/brain.glb');
+  const brainModelUrl = `${import.meta.env.BASE_URL}models/brain.glb`;
+  const { scene } = useGLTF(brainModelUrl);
 
   // Dark blue / cyan holographic material highlighting the gyri folds and sulci
   const brainMaterial = useMemo(() => {
@@ -142,7 +143,7 @@ export const BrainModel = ({
 };
 
 // Preload the real brain model
-useGLTF.preload('/models/brain.glb');
+useGLTF.preload(`${import.meta.env.BASE_URL}models/brain.glb`);
 
 
 
